@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wheel of doom</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="spinBtn">spin</div>
+        <div class="wheel">
+            <div class="number" style="--i:1;--clr:darkcyan;"><span>100</span></div>
+            <div class="number" style="--i:2;--clr:rgb(16, 88, 88);"><span>1</span></div>
+            <div class="number" style="--i:3;--clr:rgb(16, 201, 130);"><span>50</span></div>
+            <div class="number" style="--i:4;--clr:rgb(16, 247, 177);"><span>1000</span></div>
+            <div class="number" style="--i:5;--clr:rgb(16, 247, 120);"><span>10</span></div>
+            <div class="number" style="--i:6;--clr:rgb(9, 75, 75);"><span>5</span></div>
+            <div class="number" style="--i:7;--clr:rgb(6, 252, 116);"><span>20</span></div>
+            <div class="number" style="--i:8;--clr:rgb(142, 233, 233);"><span>100000</span></div>
+        </div>
+    </div>
+    <script>
+        let wheel = document.querySelector('.wheel');
+        let spinBtn = document.querySelector('.spinBtn');
+        let value = Math.ceil(Math.random() * 3600);
+
+     spinBtn.onclick = function(){
+        wheel.style.transform = "rotate(" + value + "deg)";
+         value+= Math.ceil(Math.random() * 3600);
+     }
+
+    </script>
+</body>
+</html>
